@@ -22,7 +22,7 @@
  *  \ingroup    ...
  *  \brief      File of class to manage ... numbering rules Marbre
  */
-dol_include_once('/custom/rktticket/core/modules/ticket/modules_rktticket.php');
+dol_include_once('/custom/rktticket/core/modules/rktticket/modules_rktticket.php');
 
 /**
  *	Class to manage ... numbering rules Marbre
