@@ -5,14 +5,14 @@
 // Take a look at conf.php.example file for an example of conf.php file
 // and explanations for all possibles parameters.
 //
-$dolibarr_main_url_root='http://localhost/mrpdev/htdocs';
-$dolibarr_main_document_root='/var/www/html/mrpdev/htdocs';
+$dolibarr_main_url_root='http://localhost/mrp/htdocs';
+$dolibarr_main_document_root='/var/www/html/mrp/htdocs';
 $dolibarr_main_url_root_alt='/custom';
-$dolibarr_main_document_root_alt='/var/www/html/mrpdev/htdocs/custom';
-$dolibarr_main_data_root='/var/www/html/mrpdev/documents';
+$dolibarr_main_document_root_alt='/var/www/html/mrp/htdocs/custom';
+$dolibarr_main_data_root='/var/www/html/mrp/documents';
 $dolibarr_main_db_host='localhost';
 $dolibarr_main_db_port='3306';
-$dolibarr_main_db_name='mrpdev';
+$dolibarr_main_db_name='mrp';
 $dolibarr_main_db_prefix='llx_';
 $dolibarr_main_db_user='root';
 $dolibarr_main_db_pass='121';

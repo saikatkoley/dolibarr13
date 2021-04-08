@@ -118,6 +118,17 @@ class DolGraph
 		}
 	}
 
+	/**
+	 * Set Y precision added by Saikat Koley on 8th April 2021 copied from  Dolibarr V7
+	 *
+	 * @param 	float	$which_prec		Precision
+	 * @return 	boolean
+	 */
+	function SetPrecisionY($which_prec)
+	{
+		$this->PrecisionY = $which_prec;
+		return true;
+	}
 
 	// phpcs:disable PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps
 	/**

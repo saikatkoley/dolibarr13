@@ -1,0 +1,150 @@
+# <one line to give the program's name and a brief idea of what it does.>
+# Copyright (C) <year>  <name of author>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#
+# Generic
+#
+
+# Module label 'ModuleXXXName'
+# (where XXX is value of numeric property 'numero' of module)
+Module600001Name = Ticket
+# Module description 'ModuleXXXDesc'
+# (where XXX is value of numeric property 'numero' of module)
+Module600001Desc = Ticket module for Dolibarr
+
+#
+# Permissions
+#
+Permission600002 = Read ticket
+Permission600003 = Create ticket
+Permission600004 = Modify ticket
+Permission600005 = Delete ticket
+Permission600006 = Assign ticket
+Permission600007 = Close ticket
+Permission600008 = Send ticket
+
+#
+# Admin page
+#
+TicketSetup = Ticket setup
+Settings = Settings
+TicketConf = Ticket configuration
+TicketsNumberingModules = Tickets numbering models
+TicketsModelModule = Tickets documents models
+PDFProformaDescription = A complete proforma ticket model (logo...)
+PDFEinsteinDescription = A complete ticket model (logo...)
+WatermarkOnDraftTickets = Watermark on draft tickets (none if empty)
+OtherSettings = Other settings
+AlwaysShowListMenu = Always show the list menu
+
+#
+# PDF
+#
+TicketFrom = Ticket from
+TicketTo = Ticket to
+ProForma = Proforma ticket
+
+#
+# Dictionnaries page
+#
+TicketDict = Ticket dictionnaries
+Dict = Dictionnaries
+DictName = Dictionnary name
+DictLabel = Label
+DictDesc = Description
+DictState = State
+
+#
+# About page
+#
+About = About
+TicketAbout = About Ticket
+TicketAboutPageDesc = <a href="http://www.dolistore.com/fr/modules/830-Ticket.html" target="_blank"><b>Ticket</b></a> : Allow you to manage your tickets easily<br/><br/>Developed by <a href="https://github.com/AXeL-dev" target="_blank">AXeL</a><br/><br/>For any question or feedback, contact me on <a href="mailto:contact.axel.dev@gmail.com">contact.axel.dev@gmail.com</a><br><br>Find my other modules on <a href="http://www.dolistore.com/search.php?orderby=position&orderway=desc&search_query=axel-dev&submit_search=Rechercher" target="_blank">Dolistore</a>
+
+#
+# Sample page
+#
+TicketIndexPageName = Ticket
+NewTicket = New ticket
+Date = Date
+Type = Type
+Category = Category
+Severity = Severity
+Subject = Subject
+Message = Message
+CreateTicket = Create ticket
+TicketCard = Card
+CreatedBy = Created by
+AssignedTo = Assigned to
+YouCanChangeValuesForThisListFromModuleDictionarySetup = You can change values for this list from module menu setup - dictionary
+ConfirmValidateTicket = Are you sure you want to validate this ticket under name <b>%s</b> ?
+ValidateTicket = Validate ticket
+ConfirmDeleteTicket = Are you sure you want to delete this ticket <b>%s</b> ?
+DeleteTicket = Delete ticket
+ConfirmCloseTicket = Are you sure you want to close this ticket <b>%s</b> ?
+CloseTicket = Close ticket
+ShowTicket = Show ticket
+TicketsArea = Tickets area
+LastCreatedTickets = Last %s created tickets
+Reopen = Re-open
+ReopenTicket = Re-open ticket
+ConfirmReopenTicket = Are you sure you want to re-open this ticket <b>%s</b> ?
+SendByMail = Send by email
+SendTicketRef = Submission of ticket %s
+SendTicketByMail = Send ticket by mail
+TicketMailTemplate = __CONTACTCIVNAME__\n\nYou will find here the ticket __TICKETREF__\n\n__PERSONALIZED__Sincerely\n\n__SIGNATURE__
+
+#
+# Status
+#
+
+TicketStatusDraft = Draft
+TicketStatusValidated = Validated
+TicketStatusAssigned = Assigned
+TicketStatusNotAssigned = Not assigned
+TicketStatusClosed = Closed
+TicketStatusDraftShort = Draft
+TicketStatusValidatedShort = Validated
+TicketStatusAssignedShort = Assigned
+TicketStatusNotAssignedShort = Not assigned
+TicketStatusClosedShort = Closed
+
+#
+# Sample box
+#
+BoxLastTickets = Latest created tickets
+BoxTitleLastTickets = Latest %s created tickets
+NoRecordedTickets = No recorded tickets
+ReadPermissionNotAllowed = Read permission not allowed
+
+#
+# Menu
+#
+Ticket = Ticket
+Tickets = Tickets
+NewTicket = New ticket
+TicketList = List
+TicketStatistics = Statistics
+
+#
+# Error/Warning Messages
+#
+
+#
+# Statistics
+#
+NbOfTickets = N° of Tickets
+NumberOfTicketsByMonth= N° of Tickets by Month

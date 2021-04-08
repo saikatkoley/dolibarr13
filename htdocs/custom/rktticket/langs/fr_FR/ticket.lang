@@ -1,0 +1,150 @@
+# <one line to give the program's name and a brief idea of what it does.>
+# Copyright (C) <year>  <name of author>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#
+# Générique
+#
+
+# Module label 'ModuleXXXName'
+# (where XXX is value of numeric property 'numero' of module)
+Module600001Name = Ticket
+# Module description 'ModuleXXXDesc'
+# (where XXX is value of numeric property 'numero' of module)
+Module600001Desc = Module de ticket confectionné pour dolibarr
+
+#
+# Permissions
+#
+Permission600002 = Lire les tickets
+Permission600003 = Créer les tickets
+Permission600004 = Modifier les tickets
+Permission600005 = Supprimer les tickets
+Permission600006 = Assigner les tickets
+Permission600007 = Fermer les tickets
+Permission600008 = Envoyer les tickets
+
+#
+# Page d'administration
+#
+TicketSetup = Configuration du module ticket
+Settings = Réglages
+TicketConf = Paramètres de ticket
+TicketsNumberingModules = Modèles de numérotation des tickets
+TicketsModelModule = Modèles de document des tickets
+PDFProformaDescription = Modèle de ticket proforma complet (logo...)
+PDFEinsteinDescription = Modèle de ticket complet (logo...)
+WatermarkOnDraftTickets = Filigrane sur les brouillons de tickets (aucun si vide)
+OtherSettings = Autre paramètres
+AlwaysShowListMenu = Toujours afficher le menu de la liste
+
+#
+# PDF
+#
+TicketFrom = Ticket de
+TicketTo = Ticket pour
+ProForma = Ticket Proforma
+
+#
+# Page des dictionnaires
+#
+TicketDict = Dictionnaires du module ticket
+Dict = Dictionnaires
+DictName = Nom du dictionnaire
+DictLabel = Libellé
+DictDesc = Description
+DictState = État
+
+#
+# Page À propos
+#
+About = À propos
+TicketAbout = À propos du module ticket
+TicketAboutPageDesc = <a href="http://www.dolistore.com/fr/modules/830-Ticket.html" target="_blank"><b>Ticket</b></a> : Vous permet de gérer vos tickets en toute simplicité<br/><br/>Développé par <a href="https://github.com/AXeL-dev" target="_blank">AXeL</a><br/><br/>Pour toute question technique ou retour, contactez-moi sur <a href="mailto:contact.axel.dev@gmail.com">contact.axel.dev@gmail.com</a><br><br>Retrouvez mes autres modules sur <a href="http://www.dolistore.com/search.php?orderby=position&orderway=desc&search_query=axel-dev&submit_search=Rechercher" target="_blank">Dolistore</a>
+
+#
+# Page d'exemple
+#
+TicketIndexPageName = Ticket
+NewTicket = Nouveau ticket
+Date = Date
+Type = Type
+Category = Catégorie
+Severity = Sévérité
+Subject = Sujet
+Message = Message
+CreateTicket = Créer ticket
+TicketCard = Fiche
+CreatedBy = Crée par
+AssignedTo = Assigné à
+YouCanChangeValuesForThisListFromModuleDictionarySetup = Vous pouvez changer ces valeurs depuis le menu accueil - configuration - modules - configuration - dictionnaires
+ConfirmValidateTicket = Êtes-vous sûr de vouloir valider ce ticket sous la référence <b>%s</b> ?
+ValidateTicket = Valider ticket
+ConfirmDeleteTicket = Êtes-vous sûr de vouloir supprimer ce ticket <b>%s</b> ?
+DeleteTicket = Supprimer ticket
+ConfirmCloseTicket = Êtes-vous sûr de vouloir fermer/clôturer ce ticket <b>%s</b> ?
+CloseTicket = Clôturer ticket
+ShowTicket = Afficher ticket
+TicketsArea = Espace tickets
+LastCreatedTickets = Les %s derniers tickets crées
+Reopen = Ré-ouvrir
+ReopenTicket = Ré-ouvrir ticket
+ConfirmReopenTicket = Êtes-vous sûr de vouloir ré-ouvrir ce ticket <b>%s</b> ?
+SendByMail = Envoyer par email
+SendTicketRef = Envoi du ticket %s
+SendTicketByMail = Envoi du ticket par email
+TicketMailTemplate = __CONTACTCIVNAME__\n\nVeuillez trouver ci-joint le ticket __TICKETREF__\n\n__PERSONALIZED__Cordialement\n\n__SIGNATURE__
+
+#
+# Status
+#
+
+TicketStatusDraft = Brouillon (à valider)
+TicketStatusValidated = Validé
+TicketStatusAssigned = Assigné
+TicketStatusNotAssigned = Non assigné
+TicketStatusClosed = Fermé / Cloturé
+TicketStatusDraftShort = Brouillon
+TicketStatusValidatedShort = Validé
+TicketStatusAssignedShort = Assigné
+TicketStatusNotAssignedShort = Non assigné
+TicketStatusClosedShort = Fermé
+
+#
+# Box d'exemple
+#
+BoxLastTickets = Derniers tickets crées
+BoxTitleLastTickets = Les %s derniers tickets crées
+NoRecordedTickets = Aucun ticket enregistré
+ReadPermissionNotAllowed = Vous n'avez pas la permission de lecture
+
+#
+# Menu
+#
+Ticket = Ticket
+Tickets = Tickets
+NewTicket = Nouveau ticket
+TicketList = Liste
+TicketStatistics = Statistiques
+
+#
+# Error/Warning Messages
+#
+
+#
+# Statistics
+#
+NbOfTickets = N° de Tickets
+NumberOfTicketsByMonth= N° de Tickets par Mois
