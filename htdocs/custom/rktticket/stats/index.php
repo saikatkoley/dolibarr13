@@ -31,10 +31,11 @@ global $db, $langs, $user;
 
 dol_include_once('/custom/rktticket/class/rktticketStats.class.php');
 //dol_include_once('/ticket/class/ticket.class.php');
-require_once DOL_DOCUMENT_ROOT.'/core/class/dolgraph.class.php';
+// require_once DOL_DOCUMENT_ROOT.'/core/class/dolgraph.class.php';
+require_once DOL_DOCUMENT_ROOT.'/custom/rktticket/core/class/customdolgraph.class.php';
 
-$WIDTH=DolGraph::getDefaultGraphSizeForStats('width');
-$HEIGHT=DolGraph::getDefaultGraphSizeForStats('height');
+$WIDTH=CustomDolGraph::getDefaultGraphSizeForStats('width');
+$HEIGHT=CustomDolGraph::getDefaultGraphSizeForStats('height');
 
 // Load translation files required by the page
 $langs->load("ticket@ticket");
@@ -105,7 +106,7 @@ else
     $fileurlnb = DOL_URL_ROOT.'/viewimage.php?modulepart=ticketstats&file=ticketsnbinyear-'.$year.'.png';
 }
 
-$px1 = new DolGraph();
+$px1 = new CustomDolGraph();
 $mesg = $px1->isGraphKo();
 if (! $mesg)
 {
