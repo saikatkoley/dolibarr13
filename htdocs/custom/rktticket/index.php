@@ -1,4 +1,8 @@
 <?php
+/*ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);*/
+
 /* <one line to give the program's name and a brief idea of what it does.>
  * Copyright (C) <year>  <name of author>
  *
@@ -26,9 +30,10 @@ if (false === (@include '../main.inc.php')) {  // From htdocs directory
 global $db, $langs, $user;
 
 dol_include_once('/custom/rktticket/class/rktticket.class.php');
+dol_include_once('/custom/rktticket/lib/rktticket.lib.php');
 
 // Load translation files required by the page
-$langs->load("ticket@ticket");
+$langs->load("rktticket@rktticket");
 
 // Get parameters
 $socid = GETPOST('socid','int');
@@ -73,6 +78,7 @@ $sql.= " FROM ".MAIN_DB_PREFIX."rkt_ticket as t";
 $sql.= " LEFT JOIN ".MAIN_DB_PREFIX."societe as s ON t.fk_soc = s.rowid";
 //$sql.= " WHERE t.entity IN (".getEntity('societe', 1).")";
 $sql.= " GROUP BY t.status";
+// echo $sql;
 $resql = $db->query($sql);
 if ($resql)
 {
@@ -120,7 +126,18 @@ if ($resql)
     {
         print '<tr class="impair"><td align="center" colspan="2">';
         $data=array('series'=>$dataseries);
-        dol_print_graph('stats',300,180,$data,1,'pie',1);
+        custom_dol_print_graph('stats',300,180,$data,1,'pie',1);
+        /*include_once DOL_DOCUMENT_ROOT.'/core/class/dolgraph.class.php';
+        $dolgraph=new DolGraph();
+        $dolgraph->SetTitle($langs->transnoentities('Ticket').'<br>'.$langs->transnoentities('Ticket').'%');
+        $dolgraph->SetMaxValue(50);
+        $dolgraph->SetData($data);
+        $dolgraph->setShowLegend(1);
+        $dolgraph->setShowPercent(1);
+        $dolgraph->SetType(array('pie'));
+        $dolgraph->setWidth('100%');
+        $dolgraph->draw('idofgraph');
+        print $dolgraph->show($total?0:1);*/
         print '</td></tr>';
     }
     
@@ -143,12 +160,12 @@ $max=10;
  */
 
 $sql = "SELECT t.rowid, t.ref, t.creation_date, t.status, s.rowid as socid, s.nom as socname, s.client, s.canvas";
-$sql.= " FROM ".MAIN_DB_PREFIX."ticket as t";
+$sql.= " FROM ".MAIN_DB_PREFIX."rkt_ticket as t";
 $sql.= " LEFT JOIN ".MAIN_DB_PREFIX."societe as s ON t.fk_soc = s.rowid";
 //$sql.= " WHERE c.entity IN (".getEntity('ticket', 1).")";
 $sql.= " ORDER BY t.creation_date DESC";
 $sql.= $db->plimit($max, 0);
-
+// echo $sql;
 $resql=$db->query($sql);
 if ($resql)
 {

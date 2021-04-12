@@ -106,6 +106,7 @@ SendByMail = Send by email
 SendTicketRef = Submission of ticket %s
 SendTicketByMail = Send ticket by mail
 TicketMailTemplate = __CONTACTCIVNAME__\n\nYou will find here the ticket __TICKETREF__\n\n__PERSONALIZED__Sincerely\n\n__SIGNATURE__
+TicketAttachedWithThisThirdParty = Ticket attached with this third party
 
 #
 # Status

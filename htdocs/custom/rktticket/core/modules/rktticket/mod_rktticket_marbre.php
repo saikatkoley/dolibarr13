@@ -106,10 +106,10 @@ class mod_rktticket_marbre extends ModeleNumRefTickets
 		// D'abord on recupere la valeur max
 		$posindice=8;
 		$sql = "SELECT MAX(CAST(SUBSTRING(ref FROM ".$posindice.") AS SIGNED)) as max";
-		$sql.= " FROM ".MAIN_DB_PREFIX."ticket";
+		$sql.= " FROM ".MAIN_DB_PREFIX."rkt_ticket";
 		$sql.= " WHERE ref like '".$this->prefix."____-%'";
 		//$sql.= " AND entity = ".$conf->entity;
-
+		// echo $sql;exit;
 		$resql=$db->query($sql);
 		if ($resql)
 		{

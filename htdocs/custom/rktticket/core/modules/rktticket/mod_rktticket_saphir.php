@@ -122,7 +122,7 @@ class mod_rktticket_saphir extends ModeleNumRefTickets
 		}
 
                 $date = time();
-		$numFinal=get_next_value($db,$mask,'ticket','ref','',$objsoc,$date,'next',false);
+		$numFinal=get_next_value($db,$mask,'rktticket','ref','',$objsoc,$date,'next',false);
 
 		return  $numFinal;
 	}

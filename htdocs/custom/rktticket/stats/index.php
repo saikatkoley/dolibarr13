@@ -111,7 +111,7 @@ $mesg = $px1->isGraphKo();
 if (! $mesg)
 {
     $px1->SetData($data);
-    $px1->SetPrecisionY(0);
+    $px1->CustomSetPrecisionY(0);
     $i=$startyear;$legend=array();
     while ($i <= $endyear)
     {
@@ -126,7 +126,7 @@ if (! $mesg)
     $px1->SetYLabel($langs->trans("NbOfTickets"));
     $px1->SetShading(3);
     $px1->SetHorizTickIncrement(1);
-    $px1->SetPrecisionY(0);
+    $px1->CustomSetPrecisionY(0);
     $px1->mode='depth';
     $px1->SetTitle($langs->trans("NumberOfTicketsByMonth"));
 

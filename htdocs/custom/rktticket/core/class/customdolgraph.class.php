@@ -42,7 +42,7 @@ class CustomDolGraph extends DolGraph
 	 * @param 	float	$which_prec		Precision
 	 * @return 	boolean
 	 */
-	function SetPrecisionY($which_prec)
+	function CustomSetPrecisionY($which_prec)
 	{
 		$this->PrecisionY = $which_prec;
 		return true;

@@ -74,7 +74,11 @@ class modRktTicket extends DolibarrModules
 		$this->depends = array("modSociete");
 		$this->requiredby = array();
 		$this->conflictwith = array();
-		$this->langfiles = array('ticket@ticket');
+		$this->langfiles = array('rktticket@rktticket');
+
+		$this->tabs = array(
+			'thirdparty:+rktticket:Tickets:@rktticket:$user->rights->rktticket->read:/custom/rktticket/ticket_related_to_thirdparty.php?socid=__ID__',
+		);
 
 		// Constants
 		$this->const = array();
@@ -175,7 +179,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'',
 					'url'=>'/custom/rktticket/index.php',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'1',
 					'perms'=>'$user->rights->rktticket->read',
@@ -190,7 +194,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'rkttickets',
 					'url'=>'/custom/rktticket/index.php?mainmenu=rktticket&leftmenu=rkttickets',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'1',
 					'perms'=>'$user->rights->rktticket->read',
@@ -205,7 +209,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'',
 					'url'=>'/custom/rktticket/ticket.php?mainmenu=rktticket&leftmenu=rkttickets&action=create',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'1',
 					'perms'=>'$user->rights->rktticket->create',
@@ -220,7 +224,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'rktticketlist',
 					'url'=>'/custom/rktticket/list.php?mainmenu=rktticket&leftmenu=rktticketlist',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'1',
 					'perms'=>'$user->rights->rktticket->read',
@@ -232,10 +236,10 @@ class modRktTicket extends DolibarrModules
 		$this->menu[$r]=array('fk_menu'=>'fk_mainmenu=rktticket,fk_leftmenu=rktticketlist',
 					'type'=>'left',
 					'titre'=>'TicketStatusDraftShort',
-					'mainmenu'=>'ticket',
+					'mainmenu'=>'rktticket',
 					'leftmenu'=>'',
 					'url'=>'/custom/rktticket/list.php?mainmenu=rktticket&leftmenu=rktticketlist&status=0',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'$conf->global->TICKET_ALWAYS_SHOW_LIST_MENU || $leftmenu == \'rktticketlist\'',
 					'perms'=>'$user->rights->rktticket->read',
@@ -250,7 +254,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'',
 					'url'=>'/custom/rktticket/list.php?mainmenu=rktticket&leftmenu=rktticketlist&status=1',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'$conf->global->TICKET_ALWAYS_SHOW_LIST_MENU || $leftmenu == \'rktticketlist\'',
 					'perms'=>'$user->rights->rktticket->read',
@@ -265,7 +269,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'',
 					'url'=>'/custom/rktticket/list.php?mainmenu=rktticket&leftmenu=rktticketlist&status=2',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'$conf->global->TICKET_ALWAYS_SHOW_LIST_MENU || $leftmenu == \'rktticketlist\'',
 					'perms'=>'$user->rights->rktticket->read',
@@ -280,7 +284,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'',
 					'url'=>'/custom/rktticket/list.php?mainmenu=rktticket&leftmenu=rktticketlist&status=3',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'$conf->global->TICKET_ALWAYS_SHOW_LIST_MENU || $leftmenu == \'rktticketlist\'',
 					'perms'=>'$user->rights->rktticket->read',
@@ -295,7 +299,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'',
 					'url'=>'/custom/rktticket/list.php?mainmenu=rktticket&leftmenu=rktticketlist&status=4',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'$conf->global->TICKET_ALWAYS_SHOW_LIST_MENU || $leftmenu == \'rktticketlist\'',
 					'perms'=>'$user->rights->rktticket->read',
@@ -310,7 +314,7 @@ class modRktTicket extends DolibarrModules
 					'mainmenu'=>'rktticket',
 					'leftmenu'=>'',
 					'url'=>'/custom/rktticket/stats/index.php?mainmenu=rktticket&leftmenu=rkttickets',
-					'langs'=>'ticket@ticket',
+					'langs'=>'rktticket@rktticket',
 					'position'=>100,
 					'enabled'=>'1',
 					'perms'=>'$user->rights->rktticket->create',
