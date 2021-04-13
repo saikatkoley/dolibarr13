@@ -43,6 +43,7 @@ require_once DOL_DOCUMENT_ROOT.$mod_path.'/rktticket/lib/rktticket.lib.php';
 require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
 require_once DOL_DOCUMENT_ROOT.'/user/class/user.class.php';
 require_once DOL_DOCUMENT_ROOT . '/core/class/html.formfile.class.php';
+require_once DOL_DOCUMENT_ROOT.'/custom/rktticket/core/lib/custom_functions.lib.php';
 dol_include_once('/custom/rktticket/class/rktticket.class.php');
 
 // Load translation files required by the page
@@ -138,7 +139,7 @@ if ($socid)
 
 	$params = '';
 
-	$newcardbutton .= dolGetButtonTitle($langs->trans("NewTicket"), '', 'fa fa-plus-circle', DOL_URL_ROOT.'/custom/rktticket/ticket.php?action=create&socid='.$object->id.'&amp;backtopage='.urlencode($backtopage), '', 1, $params);
+	$newcardbutton .= CustomdolGetButtonTitle($langs->trans("NewTicket"), '', 'fa fa-plus-circle', DOL_URL_ROOT.'/custom/rktticket/ticket.php?action=create&socid='.$object->id.'&amp;backtopage='.urlencode($backtopage), '', 1, $params);
 
     print '<br>';
 

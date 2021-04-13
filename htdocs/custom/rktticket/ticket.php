@@ -1,7 +1,7 @@
 <?php
-/*ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);*/
+error_reporting(E_ALL);
 
 /* <one line to give the program's name and a brief idea of what it does.>
  * Copyright (C) <year>  <name of author>
@@ -34,7 +34,8 @@ require_once DOL_DOCUMENT_ROOT.$mod_path.'/rktticket/class/rktticketdict.class.p
 require_once DOL_DOCUMENT_ROOT.$mod_path.'/rktticket/lib/rktticket.lib.php';
 require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
 require_once DOL_DOCUMENT_ROOT.'/user/class/user.class.php';
-require_once DOL_DOCUMENT_ROOT . '/core/class/html.formfile.class.php';
+// require_once DOL_DOCUMENT_ROOT . '/core/class/html.formfile.class.php';
+require_once DOL_DOCUMENT_ROOT . '/custom/rktticket/core/class/html.customformfile.class.php';
 
 // Load translation files required by the page
 $langs->load('companies');
@@ -386,7 +387,8 @@ include DOL_DOCUMENT_ROOT.'/core/actions_sendmails.inc.php';
 llxHeader('', $langs->trans('TicketIndexPageName'), '');
 
 $form = new Form($db);
-$formfile = new FormFile($db);
+// $formfile = new FormFile($db);
+$formfile = new CustomFormFile($db);
 
 /**
  * *******************************************************************
@@ -846,7 +848,7 @@ else if ($object->id > 0 || ! empty($object->ref))
             $urlsource = $_SERVER["PHP_SELF"] . "?id=" . $object->id;
             $genallowed = $user->rights->rktticket->create;
             $delallowed = $user->rights->rktticket->delete;
-            print $formfile->showdocuments('rktticket', $ticref, $filedir, $urlsource, $genallowed, $delallowed, $object->modelpdf, 1, 0, 0, 28, 0, '', '', '', $soc->default_lang);
+            print $formfile->customshowdocuments('rktticket', $ticref, $filedir, $urlsource, $genallowed, $delallowed, $object->modelpdf, 1, 0, 0, 28, 0, '', '', '', $soc->default_lang);
 
             print '</div></div>';
 

@@ -157,7 +157,7 @@ function show_tickets($conf, $langs, $db, $object, $backtopage = '', $nocreateli
         $newcardbutton = '';
         if (!empty($conf->rktticket->enabled) && $user->rights->rktticket->creer && empty($nocreatelink))
         {
-            $newcardbutton .= dolGetButtonTitle($langs->trans('AddTicket'), '', 'fa fa-plus-circle', DOL_URL_ROOT.'/custom/rktticket/ticket.php?socid='.$object->id.'&amp;action=create&amp;backtopage='.urlencode($backtopage));
+            $newcardbutton .= CustomdolGetButtonTitle($langs->trans('AddTicket'), '', 'fa fa-plus-circle', DOL_URL_ROOT.'/custom/rktticket/ticket.php?socid='.$object->id.'&amp;action=create&amp;backtopage='.urlencode($backtopage));
         }
 
         print "\n";
